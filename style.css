@@ -1,0 +1,324 @@
+@font-face {
+    font-family: psansBold;
+    src: url(./fonts/Product\ Sans\ Bold.ttf);
+}
+@font-face{
+    font-family: psans;
+    src: url(./fonts/Product\ Sans\ Regular.ttf);
+}
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: psans;
+}
+*::selection{
+    background-color: #fff;
+    color: rgb(255, 51, 0);
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: crimson;
+}
+nav{
+    position: fixed;
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+    z-index: 99;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    width: 0%;
+    background-color: #fff;
+    left: 0%;
+    top: 100%;
+    border-radius: 30px;
+}
+nav a:hover::after{
+    /* width: 100%; */
+    animation: navAnime 0.5s ease 1 forwards;
+}
+@keyframes navAnime{
+    0%{
+        left: 0%;
+        width: 0%;
+    }
+    50%{
+        left: 0%;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0%;
+    }
+}
+nav i{
+    cursor: pointer;
+    font-size: 1.3vw;
+    color: #fff;
+}
+#cntr-nav{
+    display: flex;
+    gap: 3vw;
+}
+.one{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(120deg,rgb(255, 128, 0) 10%,rgb(255, 51, 0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vw;
+}
+#fanta{
+    width: 33%;
+    height: 80%;
+    margin-top: 3vw;
+    z-index: 3;
+    position: relative;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+}
+#orange-slice{
+    width: 25%;
+    position: absolute;
+    top: 9%;
+    left: 30.5%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 2;
+}
+#orange{
+    width: 17%;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    z-index: 4;
+    transition: all ease;
+}
+.one h1{
+    text-transform: uppercase;
+    font-family: psansBold;
+    color: #fff;
+    position: absolute;
+    font-size: 24vw;
+    top: 25%;
+}
+#logo{
+    width: 7%;
+}
+
+.one .leaf{
+    position: absolute;
+}
+.one #leaf{
+    width: 18%;
+    left: 3%;
+    top: 11%;
+    transform: rotate(60deg);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 10;
+}
+
+.one #leaf-coco{
+    width: 20%;
+    left: 80%;
+    top: 8.5%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.two{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color:  #482121;
+}
+.two #lft,.two #rght{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.two #lft{
+    width: 50%;
+}
+.two #rght{
+    width: 50%;
+} 
+.two svg{
+    transform: rotateX(50deg);
+    width: 70%;
+    margin-top: 55%;
+}
+.two #rght{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    gap: 1vw;
+}
+#rght p{
+    width: 70%;
+    font-size: 1vw;
+    z-index: 91;
+}
+#rght h1{
+    font-size: 3.5vw;
+    z-index: 91;
+}
+#checkOutBtn{
+    padding: 0.9vw 2.3vw;
+    cursor: pointer;
+    border: 1px solid #482121;
+    font-size: 1vw;
+    border-radius: 40px;
+    font-weight: 600;
+    color: #482121;
+    transition: all ease 0.1s;
+}
+#checkOutBtn:hover{
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+.three{
+    width: 100%;
+    height: 100vh;
+    /* background-color: darkslategray; */
+    background-color: #482121;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 5vw;
+    padding-top: 10vw;
+    position: relative;
+    overflow: hidden;
+}
+#card{
+    width: 24vw;
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card1{
+    background: linear-gradient(120deg,rgb(37, 182, 114),rgb(14, 120, 74) 75%);
+}
+.card2{
+    background: linear-gradient(120deg,#e69560,rgb(225, 126, 61)75%);
+}
+.card3{
+    background: linear-gradient(120deg,#397cd3,#1655a7 75%);
+}
+.three .three-leaf1,.three .three-leaf2,.three .three-leaf3{
+    position: absolute;
+}
+.three .three-leaf1{
+    width: 20%;
+    top: 78%;
+    left: -8%;
+    transform: rotate(60deg);
+}
+.three .three-leaf2{
+    width: 26%;
+    top:-12%;
+    right:-13%;
+    transform: rotate(210deg);
+}
+.three .three-leaf3{
+    width: 30%;
+    top: -44%;
+    left: 20%;
+    transform: rotate(270deg);
+}
+#pepsi, #sprite{
+    position: absolute;
+    z-index: 90;
+}
+#pepsi{
+    width: 90%;
+    height: 86%;
+    top: -11%;
+}
+#sprite{
+    width: 125%;
+    height: 75%;
+    top: -5%;
+}
+#card-h1{
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 21%;
+    letter-spacing: 2px;
+    font-size: 2.5vw;
+}
+#card-btn{
+    border: none;
+    padding: 0.8vw 3.5vw;
+    border-radius: 40px;
+    font-size: 1.5vw;
+    position: absolute;
+    bottom: 8%;
+    scale: 0.8;
+    font-weight: 600;
+    cursor: pointer;
+}
+.card-btn1{
+    color: rgb(14, 125, 73);
+}
+.card-btn2{
+    color: rgb(196, 116, 46);
+}
+.card-btn3{
+    color: #1655a7;
+}
+
+#card-fanta{
+    position: absolute;
+    width: 110%;
+    height: 91.5%;
+    top: -14%;
+    z-index: 90;
+}
+.card-fruits{
+    position: absolute;
+}
+#card-lemon{
+    width: 113%;
+    top: -33%;
+}
+/* #card-orange{
+    width: 116%;
+    top: -27%;
+} */
+#card-litchi{
+    width: 88%;
+    top: -30%;
+    transform: rotate(-10deg);
+}
+
+.assets{
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
